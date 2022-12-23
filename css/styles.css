@@ -833,6 +833,7 @@ left: 12px;
 
 }
 
+
 .form-input:focus+.form-icon {
    fill: var(--accent-color);
 }
