@@ -259,7 +259,7 @@
 
  .hero-button:hover,
  .hero-button:focus{
-  background-color: blue;
+  background-color: #188CE8;
   color: var(--white-color);
    
  }
@@ -773,6 +773,11 @@ transform: translate(-50%, -50%) scale(0) rotateZ(180deg);
    
 }
 
+.close:hover,
+.close:focus{
+   fill: var(--accent-color);
+}
+
 /*forms*/
 
 .modal-title{
@@ -828,6 +833,26 @@ left: 12px;
 
 }
 
+.form-input:focus+.form-icon {
+   fill: var(--accent-color);
+}
+
+.form-input:hover{
+   cursor: pointer;
+}
+
+.form-textarea:hover{
+   cursor: pointer;
+}
+
+.form-input:focus{
+   outline: 1px solid var(--accent-color);
+}
+
+.form-textarea:focus{
+   outline: 1px solid var(--accent-color);
+}
+
 .form-field input::placeholder{
    color:var(--primary-text-color);
    
@@ -870,17 +895,56 @@ font-size: 12px;
       line-height: 1.88;
       cursor: pointer;
       font-family: inherit;
-     box-shadow: 0px, 4px rgba(0, 0, 0, 0.15);
+    
       letter-spacing: 0.06em;
       margin: 0 auto;
-      margin-top: 30px;
+      
+
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
-.agreement-checkbox{
+.form-button:hover,
+.form-button:focus {
+   background: #188CE8;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.checkbox-input{
+   appearance: none;
+   margin-right: 12px;
+}
+
+.form-checkbox{
+   position: relative;
+   justify-content: center;
+   display: flex;
    font-size: 14px;
    line-height: 1.714;
-  
+letter-spacing: 0.03em;
+font-weight: 400;
+margin-bottom: 30px;
 }
+
+.checkbox-icon{
+   fill: transparent;
+   border: 0.2px solid var(--secondary-text-color);
+   position: absolute;
+   transform: translate(-50%);
+   top: 4px;
+   left: 25px;
+   width: 16px;
+   height: 15px;
+}
+
+
+
+.checkbox-input:checked+.checkbox-icon {
+   fill: var(--white-color);
+   border: transparent;
+   background-color: var(--accent-color);
+
 
 /*Сторінка портфоліо*/
  
